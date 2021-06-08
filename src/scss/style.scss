@@ -1,0 +1,20 @@
+@import "fonts";
+@import "reset";
+
+// Base
+
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import "base/vars";
+@import "base/global";
+
+// Blocks
+
+@import "blocks/header";
+@import "blocks/hero-banner";
+@import "blocks/services";
+@import "blocks/advantages";
+@import "blocks/organization";
+@import "blocks/cars";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/price";

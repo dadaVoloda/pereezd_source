@@ -1,0 +1,77 @@
+.cars {
+  padding: 85px 0 40px;
+  @media (max-width: 640px) {
+    padding: 60px 0 20px;
+  }
+
+  &__title {
+    margin-bottom: 79px;
+    @media (max-width: 640px) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin: 0 -10px;
+    flex-wrap: wrap;
+    @media (max-width: 600px) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    margin: 0 10px 50px 10px;
+    width: calc(50% - 20px);
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  &__item-text {
+    position: relative;
+    line-height: 25px;
+    color: #fefefe;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 357px;
+      border-top: 25px solid $accent;
+      border-right: 18px solid transparent;
+      z-index: -1;
+      @media (max-width: 770px) {
+        width: 280px;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 118px;
+      border-top: 25px solid $red;
+      border-right: 18px solid transparent;
+      z-index: -1;
+      @media (max-width: 770px) {
+        width: 82px;
+      }
+    }
+  }
+
+  &__item-weight {
+    padding: 0 30px 0 20px;
+    @media (max-width: 770px) {
+      padding: 0 10px 0 7px;
+    }
+  }
+
+  &__item-car {
+    padding-left: 30px;
+    @media (max-width: 770px) {
+      padding-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.organization {
+  background-color: #e6e6e6;
+  padding: 85px 0 87px;
+  @media (max-width: 640px) {
+    padding: 60px 0 30px;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    @media (max-width: 640px) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 970px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    min-height: 122px;
+    text-align: center;
+    @media (max-width: 970px) {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 470px) {
+      width: 100%;      
+    }
+    &:nth-child(2)::after {
+      @media (max-width: 970px) {
+        display: none;
+      }
+    }
+    &:not(:last-child)::after {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 10px;
+      right: -20px;
+      top: 18.5%;
+      background-image: url('../img/svg/arrow-orgnization.svg');
+      @media (max-width: 970px) {
+        right: -10px;
+      }
+      @media (max-width: 470px) {
+        display: none;     
+      }
+    }
+  }
+
+  &__item picture {
+    display: flex;
+    align-items: flex-end;
+    min-height: 60px;
+  }
+
+  &__item-img {
+    margin: 0 auto;
+  }
+
+  &__item-title {
+    margin: 28px 0 15px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  &__item-link {
+    display: inline-block;
+    color: $green;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__item-descr {
+    line-height: 20px;
+    line-height: 22px;
+    @media (max-width: 970px) {
+      max-width: 280px;
+      margin: 0 auto;
+    }
+  }
+}
